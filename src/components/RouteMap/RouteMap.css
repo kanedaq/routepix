@@ -15,7 +15,7 @@
 	margin: 0;
 }
 
-/* ---------- header ---------- */
+/* header */
 .photo-popup .popup-header {
 	display: grid;
 	grid-template-columns: 1fr auto 1fr;
@@ -40,7 +40,7 @@
 	cursor: pointer;
 }
 
-/* ---------- body ---------- */
+/* body */
 .photo-popup .popup-body {
 	display: flex;
 	align-items: stretch;
@@ -58,9 +58,9 @@
 	cursor: pointer;
 }
 
-/* ★ 幅を確定させる */
+/* 幅を確定させる */
 .photo-popup .photo-container {
-	width: 320px;          /* ← max-width ではなく width */
+	width: 320px;
 	max-width: 80vw;
 	display: flex;
 	align-items: center;
@@ -68,7 +68,7 @@
 	overflow: hidden;
 }
 
-/* ★ Leaflet の img 制約を上書き */
+/* Leaflet の img 制約を上書き */
 .photo-popup .photo-container img {
 	max-width: 100% !important;
 	max-height: 60vh;

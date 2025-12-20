@@ -21,8 +21,10 @@ function extractTimeOfDay(s?: string): string | undefined {
 
 // ポップアップの中身のコンテンツを作成
 function createPopupContent(pin: Pin, pinIndex: number, numPins: number) {
-	// 時刻の抽出
-	const timeText = extractTimeOfDay(pin.takenAt);
+	// // 時刻の抽出
+	// const timeText = extractTimeOfDay(pin.takenAt);
+	// 時刻のみにせず日時を表示することにした
+	const timeText = pin.takenAt;
 
 	// ポップアップコンテンツを作成
 	const popupContent = document.createElement("div");
@@ -124,7 +126,9 @@ export const RouteMap: FC<RouteMapProps> = (
 	// 軌跡（ポリライン）の描画
 	useEffect(() => {
 		const map = mapRef.current;
-		if (!map) return;
+		if (!map) {
+			return;
+		}
 
 		// 既存のルートを削除
 		if (routeLayerRef.current) {
