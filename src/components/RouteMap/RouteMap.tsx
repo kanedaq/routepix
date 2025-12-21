@@ -10,14 +10,14 @@ export type Pin = Pick<L.LatLngLiteral, "lat" | "lng"> & {
 	takenAt: string;
 };
 
-// EXIF DateTimeOriginal から「時刻のみ（HH:MM:SS）」を抽出
-function extractTimeOfDay(s?: string): string | undefined {
-	if (!s) {
-		return undefined;
-	}
-	const m = s.match(/\b(\d{1,2}:\d{2}:\d{2})\b/);
-	return m ? m[1] : undefined;
-}
+// // EXIF DateTimeOriginal から「時刻のみ（HH:MM:SS）」を抽出
+// function extractTimeOfDay(s?: string): string | undefined {
+// 	if (!s) {
+// 		return undefined;
+// 	}
+// 	const m = s.match(/\b(\d{1,2}:\d{2}:\d{2})\b/);
+// 	return m ? m[1] : undefined;
+// }
 
 // ポップアップの中身のコンテンツを作成
 function createPopupContent(pin: Pin, pinIndex: number, numPins: number) {
